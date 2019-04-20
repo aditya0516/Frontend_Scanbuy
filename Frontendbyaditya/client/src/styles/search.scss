@@ -1,0 +1,115 @@
+form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 35px);
+  justify-content: center;
+  background-color: #eee;
+
+  label {
+    font-weight: 700;
+    color: gray;
+    grid-column: 2/3;
+    justify-self: end;
+    font-size: 17px;
+  }
+
+  .search__input--text {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    border: 1px solid white;
+    box-shadow: 0px 3px 5px 0px #ccc;
+    height: 28.5px;
+    align-self: start;
+    padding-left: 5px;
+    font-size: 13px;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #34d3f0;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .closeBtn {
+    position: absolute;
+    bottom: 43px;
+    right: 66px;
+    color: rgb(83, 83, 241);
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: font-size 0.5s ease;
+    background-color: white;
+
+    &:hover {
+      color: rgb(16, 16, 145);
+      font-size: 21px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search__input--submit {
+    grid-row: 2/3;
+    grid-column: 4/4;
+    align-self: center;
+    background: #15df89;
+    color: white;
+    padding: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #15df89;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0px 2px 4px 0px #ccc;
+    align-self: start;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      filter: brightness(0.9)
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  span {
+    grid-row: 3/3;
+    grid-column: 1/5;
+    justify-self: center;
+    align-self: end;
+    font-size: 12px;
+    color: #f53131;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 25px);
+
+    label {
+      grid-column: 2/4;
+      justify-self: center;
+      font-size: 14px;
+      margin-right: 53px;
+    }
+    
+    .closeBtn {
+      bottom: 22px;
+    }
+  }
+}
